@@ -1,7 +1,7 @@
 # fhir schema check on node
-- Template repository for checking fhir schemas<br>
+- Template repository for checking fhir schemas with ajv<br>
 - Requires node.js(v12.19.0 or later) and node-red
-- This can only be used on pages with no self-signed certificate issues(As of 2021/09/02)
+- **This can only be used on pages with no self-signed certificate issues(As of 2021/09/02)**
 
 
 # Usage
