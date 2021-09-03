@@ -3,7 +3,9 @@
 // https://dev.classmethod.jp/articles/typescript-node-js-validation/
 //https://noumenon-th.net/programming/2018/12/22/express-generator01/
 //(https://stackoverflow.com/questions/51612803/not-able-to-understand-ajv-validation-output-for-a-fhir-resources)
-
+/**
+ * ajvをapiとして扱う(node-redと合わせて使用)
+ */
 const express = require('express');
 const router = express.Router();
 const app = express();
@@ -20,8 +22,8 @@ router.post('/', function(req, res){
 
   const result = function(){
     if(!valid){
-      const errChecker = new ErrorChecker(validate.errors);
-      return errChecker.optimize();
+      const errChecker = new ErrorChecker();
+      return errChecker.optimize(validate.errors);
     }else{
       return valid;
     }
